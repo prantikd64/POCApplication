@@ -1,0 +1,34 @@
+<div style="width:80%; margin-left: 10%; margin-top: 50px;">
+<div class="row" style="margin-bottom: 10px;">
+    <div class="col col-lg-12">
+        <button type="button" class="btn btn-success" (click)="onCreateContact()">New</button>
+    </div>
+</div>
+<div class="row">
+    <div class="col col-lg-12">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let user of userList">
+                    <td>{{user.id}}</td>
+                    <td>{{user.firstName}}</td>
+                    <td>{{user.lastName}}</td>
+                    <td>{{user.email}}</td>
+                    <td><button type="button" class="btn btn-primary" (click)="onUpdateContact(user)">Edit</button></td>
+                    <td><button type="button" class="btn btn-danger" (click)="onDeleteContact(user)">Delete</button></td>
+                </tr>
+            </tbody>
+
+        </table>
+    </div>
+</div>
+</div>
